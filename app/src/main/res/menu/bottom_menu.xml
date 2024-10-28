@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item android:id="@+id/QRFragment"
+        android:icon="@drawable/ic_qr"
+        android:title="@string/qr_works"/>
+
+    <item android:id="@+id/moneyTransferFragment"
+        android:icon="@drawable/ic_money_transfer"
+        android:title="@string/money_transfer"/>
+
+    <item android:id="@+id/paymentFragment"
+        android:icon="@drawable/ic_payments"
+        android:title="@string/payments"/>
+
+    <item android:id="@+id/paparaCardFragment"
+        android:icon="@drawable/ic_papara_card"
+        android:title="@string/papara_card"/>
+</menu>

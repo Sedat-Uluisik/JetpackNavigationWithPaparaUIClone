@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JetpackNavigationWithPaparaUIClone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="qr_works">QR İşlemleri</string>
+    <string name="money_transfer">Para Transferi</string>
+    <string name="payments">Ödemeler</string>
+    <string name="papara_card">Papara Card</string>
+</resources>
