@@ -1,14 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
+    <ImageView
+        android:id="@+id/btn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_24"
+        android:padding="@dimen/space_12"
+        android:background="@drawable/btn_round_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/space_10"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/btn_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat"
+        android:padding="@dimen/space_12"
+        android:background="@drawable/btn_round_background"
+        app:layout_constraintTop_toTopOf="@id/btn_menu"
+        app:layout_constraintStart_toEndOf="@id/btn_menu"
+        app:layout_constraintBottom_toBottomOf="@id/btn_menu"
+        android:layout_marginStart="@dimen/space_8"/>
+
+    <ImageView
+        android:id="@+id/btn_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_user"
+        android:padding="@dimen/space_12"
+        android:background="@drawable/btn_round_background"
+        app:layout_constraintTop_toTopOf="@id/btn_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_chat"
+        android:layout_marginEnd="@dimen/space_10"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_10"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="@id/btn_user"
+        app:layout_constraintEnd_toStartOf="@id/btn_user"
+        app:layout_constraintTop_toTopOf="@id/btn_user">
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedat Uluışık"
+            android:textColor="#8A8A8A"
+            android:textSize="@dimen/size_11" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Papara No: "
+                android:textColor="#8A8A8A"
+                android:textSize="@dimen/size_11" />
+
+            <TextView
+                android:id="@+id/txtPaparaNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234567899"
+                android:textColor="#656565"
+                android:textSize="@dimen/size_11"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_layout_story"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_user"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
