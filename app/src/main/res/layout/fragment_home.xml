@@ -90,10 +90,166 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_10"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_layout_story"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_user"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_15"
+        android:paddingBottom="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/recyclerStory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/account_crd_background">
+
+        <ImageView
+            android:id="@+id/img_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flag"
+            android:layout_margin="@dimen/space_12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Türk Lirası Hesabı"
+            android:layout_marginStart="@dimen/space_4"
+            android:textSize="@dimen/space_12"
+            app:layout_constraintTop_toTopOf="@id/img_flag"
+            app:layout_constraintBottom_toBottomOf="@id/img_flag"
+            app:layout_constraintStart_toEndOf="@id/img_flag"/>
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="@dimen/space_0"
+            android:layout_height="1dp"
+            android:background="#DFDFDF"
+            android:layout_margin="@dimen/space_12"
+            app:layout_constraintTop_toBottomOf="@id/img_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₺1.000,45"
+            android:layout_marginStart="@dimen/space_12"
+            android:layout_marginTop="@dimen/space_20"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/lineView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/titleIBAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IBAN'ın:"
+            android:textSize="@dimen/size_11"
+            android:textColor="#A8A8A8"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice"
+            app:layout_constraintStart_toStartOf="@id/txtPrice"/>
+
+        <TextView
+            android:id="@+id/txtIBAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/titleIBAN"
+            app:layout_constraintBottom_toBottomOf="@id/titleIBAN"
+            app:layout_constraintStart_toEndOf="@id/titleIBAN"
+            android:text="TR00 0000 0000 0000 0000 0000 00"
+            android:textSize="@dimen/size_11"
+            android:textColor="@android:color/black"/>
+
+        <View
+            android:layout_width="@dimen/space_0"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            app:layout_constraintStart_toStartOf="@id/txtIBAN"
+            app:layout_constraintEnd_toEndOf="@id/txtIBAN"
+            app:layout_constraintTop_toBottomOf="@id/txtIBAN"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidLineCenterCrd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:id="@+id/layoutMoney"
+            android:layout_width="@dimen/space_0"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_back_grey_line"
+            android:padding="@dimen/space_10"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/titleIBAN"
+            app:layout_constraintEnd_toStartOf="@id/guidLineCenterCrd"
+            app:layout_constraintTop_toBottomOf="@id/titleIBAN"
+            android:layout_marginTop="@dimen/space_15"
+            android:layout_marginEnd="@dimen/space_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yatır/Çek"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_round_back"
+                android:src="@drawable/ic_wallet_20"
+                android:padding="@dimen/space_8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSend"
+            android:layout_width="@dimen/space_0"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_back_grey_line"
+            android:padding="@dimen/space_10"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/layoutMoney"
+            app:layout_constraintStart_toEndOf="@id/guidLineCenterCrd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/layoutMoney"
+            android:layout_marginEnd="@dimen/space_12"
+            android:layout_marginStart="@dimen/space_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gönder"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_round_back"
+                android:src="@drawable/ic_send_20"
+                android:padding="@dimen/space_8" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
