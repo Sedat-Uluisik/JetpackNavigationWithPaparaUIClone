@@ -10,4 +10,8 @@
     <dimen name="space_15">15dp</dimen>
     <dimen name="space_20">20dp</dimen>
     <dimen name="space_0">0dp</dimen>
+    <dimen name="space_25">25dp</dimen>
+    <dimen name="space_30">30dp</dimen>
+    <dimen name="space_5">5dp</dimen>
+    <dimen name="size_16">16sp</dimen>
 </resources>

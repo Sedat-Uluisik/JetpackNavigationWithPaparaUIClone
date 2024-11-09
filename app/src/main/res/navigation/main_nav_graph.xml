@@ -11,16 +11,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/QRFragment"
-        android:name="com.sedat.jetpacknavigationwithpaparauiclone.QRFragment"
-        android:label="fragment_q_r"
-        tools:layout="@layout/fragment_qr" />
-    <fragment
-        android:id="@+id/moneyTransferFragment"
-        android:name="com.sedat.jetpacknavigationwithpaparauiclone.MoneyTransferFragment"
-        android:label="fragment_money_transfer"
-        tools:layout="@layout/fragment_money_transfer" />
-    <fragment
         android:id="@+id/paymentFragment"
         android:name="com.sedat.jetpacknavigationwithpaparauiclone.PaymentFragment"
         android:label="fragment_payment"
@@ -30,4 +20,16 @@
         android:name="com.sedat.jetpacknavigationwithpaparauiclone.PaparaCardFragment"
         android:label="fragment_papara_card"
         tools:layout="@layout/fragment_papara_card" />
+
+    <dialog
+        android:id="@+id/QRFragment"
+        android:name="com.sedat.jetpacknavigationwithpaparauiclone.QRFragment"
+        android:label="fragment_qr"
+        tools:layout="@layout/fragment_qr"/>
+
+    <dialog
+        android:id="@+id/moneyTransferFragment"
+        android:name="com.sedat.jetpacknavigationwithpaparauiclone.MoneyTransferFragment"
+        android:label="fragment_money_transfer"
+        tools:layout="@layout/fragment_money_transfer"/>
 </navigation>

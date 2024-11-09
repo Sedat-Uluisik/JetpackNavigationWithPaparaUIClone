@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.sedat.jetpacknavigationwithpaparauiclone.adapter.ExperienceAdapter
 import com.sedat.jetpacknavigationwithpaparauiclone.adapter.StoryAdapter
 import com.sedat.jetpacknavigationwithpaparauiclone.databinding.FragmentHomeBinding
 import com.sedat.jetpacknavigationwithpaparauiclone.model.StoryModel
@@ -15,6 +16,7 @@ import com.sedat.jetpacknavigationwithpaparauiclone.model.StoryModel
 class HomeFragment : Fragment() {
 
     private var adapterStory: StoryAdapter ?= null
+    private var adapterExperience: ExperienceAdapter ?= null
     private var _binding: FragmentHomeBinding ?= null
     private val binding get() = _binding!!
 
@@ -37,6 +39,11 @@ class HomeFragment : Fragment() {
         adapterStory = StoryAdapter(storyList)
         binding.recyclerStory.adapter = adapterStory
 
+        val experiences = getExperiences()
+        adapterExperience = ExperienceAdapter(experiences)
+        binding.recyclerExperience.adapter = adapterExperience
+
+
     }
 
     private fun getStories(): List<StoryModel>{
@@ -46,6 +53,14 @@ class HomeFragment : Fragment() {
             StoryModel(R.drawable.img_earth, "Yurt Dışı Para Transferi"),
             StoryModel(R.drawable.img_chat, "Sohbetler"),
             StoryModel(R.drawable.img_cash, "Cash")
+        )
+    }
+
+    private fun getExperiences(): List<StoryModel>{
+        return listOf(
+            StoryModel(R.drawable.ic_black_credit_card_20, "Papara Card Ekle"),
+            StoryModel(R.drawable.ic_black_home_20, "Adres Ekle"),
+            StoryModel(R.drawable.ic_black_person_20, "Profil Fotoğrafı Ekle"),
         )
     }
 

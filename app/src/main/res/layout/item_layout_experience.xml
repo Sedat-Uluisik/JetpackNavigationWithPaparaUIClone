@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@drawable/btn_round_background"
+    android:gravity="start"
+    android:layout_margin="@dimen/space_6"
+    android:padding="@dimen/space_12">
+
+    <ImageView
+        android:id="@+id/imgStory"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_black_person_20"
+        android:padding="@dimen/space_5"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/yellow"/>
+
+    <TextView
+        android:id="@+id/txtStoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Papara Card İste"
+        android:gravity="start"
+        android:textSize="@dimen/size_13"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/space_12"/>
+
+</LinearLayout>

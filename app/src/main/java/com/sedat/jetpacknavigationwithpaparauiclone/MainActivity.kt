@@ -57,6 +57,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.paparaCardFragment -> {
                     navController.navigate(R.id.paparaCardFragment)
                 }
+                R.id.QRFragment -> {
+                    navController.navigate(R.id.QRFragment)
+                }
+                R.id.moneyTransferFragment -> {
+                    navController.navigate(R.id.moneyTransferFragment)
+                }
             }
             true
         }
